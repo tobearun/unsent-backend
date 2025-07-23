@@ -1,23 +1,12 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "api/index.ts",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/gemini.js",
-      "use": "@vercel/node"
-    }
+    { "src": "api/index.ts", "use": "@vercel/node" },
+    { "src": "api/gemini.js", "use": "@vercel/node" }
   ],
   "routes": [
-    {
-      "src": "/api",
-      "dest": "api/index.ts"
-    },
-    {
-      "src": "/api/gemini",
-      "dest": "api/gemini.js"
-    }
+    { "src": "/api/save", "dest": "api/index.ts" },
+    { "src": "/api/unlocked", "dest": "api/index.ts" },
+    { "src": "/api/gemini", "dest": "api/gemini.js" }
   ]
 }
